@@ -1,7 +1,7 @@
 import React from "react";
 import "./Product.css";
 
-const Product = ({ product, basket, setBasket }) => {
+const Product = ({ product, basket, setBasket, total, money }) => {
   //Sepete eklenen urun adeti
   const basketItem = basket.find((item) => item.id === product.id);
 
@@ -48,7 +48,7 @@ const Product = ({ product, basket, setBasket }) => {
           Remove
         </button>
         <span> {(basketItem && basketItem.amount) || 0} </span>
-        <button onClick={addToBasket} className="buy">
+        <button disabled={total + product.price > money} onClick={addToBasket} className="buy">
           Add
         </button>
       </div>
