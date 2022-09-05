@@ -5,3 +5,15 @@
 body {
   background-color: #eee;
 }
+.my-basket {
+  position: fixed;
+  top: 30px;
+  right: 0;
+  width: 7rem;
+  height: 2.75rem;
+  border-radius: 15px 0px 0px 15px;
+  background-color: #eebebb;
+  border: 0px solid white;
+  color: white;
+  font-weight: 600;
+}
