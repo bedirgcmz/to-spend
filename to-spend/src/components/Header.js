@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = ({ total, money }) => {
   return (
-    <div>
+    <div className="header">
       {total ? (
         <h6>Harcayacak {money - total} $ paraniz kaldi</h6>
       ) : (

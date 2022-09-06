@@ -4,7 +4,6 @@ import products from "./products.json";
 import Header from "./components/Header";
 import Basket from "./components/Basket";
 import * as React from "react";
-import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import ProductCard from "./components/ProductCard";
 
@@ -29,23 +28,24 @@ function App() {
   return (
     <div className="App">
       <Header total={total} money={money} />
-      <Grid container spacing={2}>
-        <Grid item xs={8} className="m-auto">
-          <Grid container spacing={2}>
-            {products.map((product) => (
-              <Grid item xs={6}>
-                <ProductCard
-                  key={product.id}
-                  product={product}
-                  basket={basket}
-                  setBasket={setBasket}
-                  total={total}
-                  money={money}
-                />
-              </Grid>
-            ))}
-          </Grid>
-          {/* {products.map((product) => (
+      <div className="mt-5 order-1">
+        <Grid className="mt-2" container spacing={2}>
+          <Grid item xs={8} className="m-auto">
+            <Grid container spacing={2}>
+              {products.map((product) => (
+                <Grid item xs={6}>
+                  <ProductCard
+                    key={product.id}
+                    product={product}
+                    basket={basket}
+                    setBasket={setBasket}
+                    total={total}
+                    money={money}
+                  />
+                </Grid>
+              ))}
+            </Grid>
+            {/* {products.map((product) => (
             <Product
               key={product.id}
               product={product}
@@ -55,27 +55,33 @@ function App() {
               money={money}
             />
           ))} */}
-        </Grid>
-        {/* <Grid item xs={4}>
+          </Grid>
+          {/* <Grid item xs={4}>
           <Basket basket={basket} />
         </Grid> */}
-      </Grid>
-      <Button variant="contained" onClick={resetBasket}>
-        Clear Basket
-      </Button>
-      <Button
+        </Grid>
+      </div>
+
+      <button type="button" className="btn  clear-basket" onClick={resetBasket}>
+        Clear Basket <i className="fa-solid fa-trash-can-list"></i>
+      </button>
+      <button
         type="button"
-        class="btn  my-basket"
+        className="btn my-basket"
         data-bs-toggle="modal"
         data-bs-target="#staticBackdrop"
       >
-        Go Basket
-      </Button>
+        Go Basket{" "}
+        <span className="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-primary">
+          {basket && basket.length}
+          <span className="visually-hidden">unread messages</span>
+        </span>
+      </button>
       <div>
         {/* Button trigger modal  */}
         {/* <button
           type="button"
-          class="btn btn-primary"
+          className="btn btn-primary"
           data-bs-toggle="modal"
           data-bs-target="#staticBackdrop"
         >
@@ -84,7 +90,7 @@ function App() {
 
         {/* <!-- Modal --> */}
         <div
-          class="modal fade "
+          className="modal fade "
           id="staticBackdrop"
           data-bs-backdrop="static"
           data-bs-keyboard="false"
@@ -92,29 +98,40 @@ function App() {
           aria-labelledby="staticBackdropLabel"
           aria-hidden="true"
         >
-          <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">
+          <div className="modal-dialog modal-xl ">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h5 className="modal-title" id="staticBackdropLabel">
                   My Basket
                 </h5>
                 <button
                   type="button"
-                  class="btn-close"
+                  className="btn-close"
                   data-bs-dismiss="modal"
                   aria-label="Close"
                 ></button>
               </div>
-              <div class="modal-body">
-                <Basket />
+              <div className="modal-body">
+                <Basket basket={basket} />
               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                  Close Basket
-                </button>
-                <button type="button" class="btn btn-primary ">
-                  Buy Product
-                </button>
+              <div className="modal-footer d-flex justify-content-between">
+                <p className="total-price">
+                  <span>Total: </span>
+                  <span>
+                    {basket.reduce((acc, item) => {
+                      return acc + item.amount * item.price;
+                    }, 0)}
+                  </span>
+                  <span> $</span>
+                </p>
+                <div className="buttons">
+                  <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">
+                    Close Basket
+                  </button>
+                  <button type="button" className="btn btn-primary ">
+                    Buy Product
+                  </button>
+                </div>
               </div>
             </div>
           </div>

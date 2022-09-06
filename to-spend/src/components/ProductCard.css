@@ -7,15 +7,23 @@
 .amount {
   padding: 3px 15px;
   background-color: #eebebb;
-  height: 35px;
+  height: 25px;
   display: inline-block;
   margin: 0 10px;
   border-radius: 10px;
-  line-height: 25px;
+  line-height: 19px;
   text-align: center;
   color: #046704;
   font-weight: 700;
 }
 .price {
   color: #ff9800;
+}
+.actions button {
+  width: 50px;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  height: 25px;
+  line-height: 10px;
 }

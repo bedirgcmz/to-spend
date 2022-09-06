@@ -52,21 +52,21 @@ const ProductCard = ({ product, basket, setBasket, total, money }) => {
           <div className="col-md-8">
             <div className="card-body">
               <h5 className="card-title">{product.title}</h5>
-              <p className="card-text">
+              {/* <p className="card-text">
                 Lorem Ipsum, kısaca Lipsum, masaüstü yayıncılık ve basın yayın sektöründe kullanılan
                 taklit yazı bloğu olarak tanımlanır.
-              </p>
-              <h5 className="text-center price">{product.price} $</h5>
+              </p> */}
+              <h5 className="text-cente price">{product.price} $</h5>
               <p className="card-text">
                 <small className="text-muted">In Stock</small>
               </p>
-              <div className="actions">
+              <div className="actions d-flex align-items-center justify-content-around">
                 <button
                   disabled={!basketItem}
                   onClick={removeFromBaskets}
                   className="sell btn btn-primary"
                 >
-                  Remove
+                  -
                 </button>
                 <span className="amount"> {(basketItem && basketItem.amount) || 0} </span>
                 <button
@@ -74,7 +74,7 @@ const ProductCard = ({ product, basket, setBasket, total, money }) => {
                   onClick={addToBasket}
                   className="buy btn btn-warning"
                 >
-                  Add
+                  +
                 </button>
               </div>
             </div>
