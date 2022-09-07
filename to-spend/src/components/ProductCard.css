@@ -19,11 +19,75 @@
 .price {
   color: #ff9800;
 }
-.actions button {
+.sell,
+.buy {
   width: 50px;
   font-size: 20px;
   font-weight: 600;
   color: white;
   height: 25px;
   line-height: 10px;
+}
+.one-sell,
+.one-buy {
+  height: 40px;
+  width: 50px;
+  font-size: 25px;
+  line-height: 0.5rem;
+}
+.one-amount {
+  padding: 3px 15px;
+  background-color: #eebebb;
+  height: 40px;
+  display: inline-block;
+  margin: 0 10px;
+  border-radius: 10px;
+  line-height: 33px;
+  text-align: center;
+  color: #046704;
+  font-weight: 700;
+}
+.product-image {
+  max-width: 85%;
+}
+.product-litle-img {
+  width: 40px;
+  border: 1px solid rgb(175, 173, 173);
+  border-radius: 5px;
+}
+.eye-open {
+  color: #046704;
+  height: 54px;
+  padding: 5px;
+  border-radius: 9px;
+  box-shadow: rgb(50 50 93 / 25%) 0px 50px 100px -20px, rgb(0 0 0 / 30%) 0px 30px 60px -30px,
+    rgb(10 37 64 / 35%) 0px -2px 6px 0px inset;
+}
+.eye-open:hover {
+  background-color: #67c367;
+  color: #ffffff;
+}
+.eye-open span {
+  font-size: 0.9rem;
+}
+.eye-close {
+  color: #ce2a1b;
+  height: 54px;
+  padding: 5px;
+  border-radius: 9px;
+  box-shadow: rgb(50 50 93 / 25%) 0px 50px 100px -20px, rgb(0 0 0 / 30%) 0px 30px 60px -30px,
+    rgb(10 37 64 / 35%) 0px -2px 6px 0px inset;
+}
+.eye-close:hover {
+  background-color: #f35448;
+  color: #ffffff;
+}
+
+.eye-close span {
+  font-size: 0.9rem;
+}
+.oneCart {
+  width: 60%;
+  margin: auto;
+  margin-top: 80px;
 }

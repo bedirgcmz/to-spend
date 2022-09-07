@@ -6,11 +6,16 @@ import Basket from "./components/Basket";
 import * as React from "react";
 import Grid from "@mui/material/Grid";
 import ProductCard from "./components/ProductCard";
+import OneProductCard from "./components/OneProductCard";
 
 function App() {
   const [money, setMoney] = useState(100000);
   const [basket, setBasket] = useState([]);
   const [total, setTotal] = useState(0);
+  const [allProducts, setAllProducts] = useState(true);
+  const [oneProducts, setOneProducts] = useState(false);
+  const [imageNumber, setImageNumber] = useState(0);
+  const [oneProductId, setOneProductId] = useState(1);
 
   const resetBasket = () => {
     setBasket([]);
@@ -28,42 +33,49 @@ function App() {
   return (
     <div className="App">
       <Header total={total} money={money} />
-      <div className="mt-5 order-1">
-        <Grid className="mt-2" container spacing={2}>
-          <Grid item xs={8} className="m-auto">
-            <Grid container spacing={2}>
-              {products.map((product) => (
-                <Grid item xs={6}>
-                  <ProductCard
-                    key={product.id}
-                    product={product}
-                    basket={basket}
-                    setBasket={setBasket}
-                    total={total}
-                    money={money}
-                  />
-                </Grid>
-              ))}
+      {allProducts && (
+        <div className="mt-5 order-1">
+          <Grid className="mt-2" container spacing={2}>
+            <Grid item xs={8} className="m-auto">
+              <Grid container spacing={2}>
+                {products.map((product) => (
+                  <Grid item xs={6}>
+                    <ProductCard
+                      key={product.id}
+                      product={product}
+                      basket={basket}
+                      setBasket={setBasket}
+                      total={total}
+                      money={money}
+                      imageNumber={imageNumber}
+                      allProducts={allProducts}
+                      setAllProducts={setAllProducts}
+                      setOneProducts={setOneProducts}
+                    />
+                  </Grid>
+                ))}
+              </Grid>
             </Grid>
-            {/* {products.map((product) => (
-            <Product
-              key={product.id}
-              product={product}
-              basket={basket}
-              setBasket={setBasket}
-              total={total}
-              money={money}
-            />
-          ))} */}
           </Grid>
-          {/* <Grid item xs={4}>
-          <Basket basket={basket} />
-        </Grid> */}
-        </Grid>
-      </div>
+        </div>
+      )}
+      {oneProducts && (
+        <OneProductCard
+          products={products}
+          basket={basket}
+          setBasket={setBasket}
+          total={total}
+          money={money}
+          imageNumber={imageNumber}
+          setImageNumber={setImageNumber}
+          setAllProducts={setAllProducts}
+          setOneProducts={setOneProducts}
+          oneProductId={oneProductId}
+        />
+      )}
 
       <button type="button" className="btn  clear-basket" onClick={resetBasket}>
-        Clear Basket <i className="fa-solid fa-trash-can-list"></i>
+        <i className="fa-regular fa-trash-can"></i> Clear Basket
       </button>
       <button
         type="button"
@@ -71,23 +83,13 @@ function App() {
         data-bs-toggle="modal"
         data-bs-target="#staticBackdrop"
       >
-        Go Basket{" "}
+        Go Basket <i className="fa-solid fa-cart-shopping"></i>
         <span className="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-primary">
           {basket && basket.length}
           <span className="visually-hidden">unread messages</span>
         </span>
       </button>
       <div>
-        {/* Button trigger modal  */}
-        {/* <button
-          type="button"
-          className="btn btn-primary"
-          data-bs-toggle="modal"
-          data-bs-target="#staticBackdrop"
-        >
-          Launch static backdrop modal
-        </button> */}
-
         {/* <!-- Modal --> */}
         <div
           className="modal fade "

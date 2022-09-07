@@ -55,3 +55,34 @@ const Product = ({ product, basket, setBasket, total, money }) => {
 };
 
 export default Product;
+
+/*
+{
+    "id": 9,
+    "title": "Çanta",
+    "price": 1500000,
+    "amount": 1,
+    "images": ["", ""] 
+  },
+  {
+    "id": 10,
+    "title": "Elmas",
+    "price": 157878777,
+    "amount": 1,
+    "images": ["", ""] 
+  },
+  {
+    "id": 11,
+    "title": "Mona Lisa",
+    "price": 2000000000,
+    "amount": 1,
+    "images": ["", ""] 
+  },
+  {
+    "id": 12,
+    "title": "Ekmek",
+    "price": 0.1,
+    "amount": 1,
+    "images": ["", ""] 
+  }
+*/

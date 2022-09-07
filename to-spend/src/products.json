@@ -4,83 +4,57 @@
       "title": "Sakız",
       "price": 0.5,
       "amount": 1,
-      "image": "https://productimages.hepsiburada.net/s/22/375/9952480460850.jpg"
+      "images": ["https://litb-cgis.rightinthebox.com/images/640x640/202007/xxvlzg1594893031123.jpg?fmt=webp&v=1", "https://litb-cgis.rightinthebox.com/images/640x640/202007/flvwnf1594892468638.jpg?fmt=webp&v=1"]
     },
     {
       "id": 2,
       "title": "Kola",
       "price": 6,
       "amount": 1,
-      "image": "https://ayb.akinoncdn.com/products/2019/01/18/1796/b792f041-5479-4d5f-a74e-233d5da474bc_size780x780_quality60_cropCenter.jpg"
+      "images": ["https://litb-cgis.rightinthebox.com/images/640x640/201808/shmh1534498143991.jpg?fmt=webp&v=1", "https://litb-cgis.rightinthebox.com/images/640x640/201806/gbaywc1530088094834.jpg"]
     },
     {
       "id": 3,
       "title": "Ayakkabı",
       "price": 400,
       "amount": 1,
-      "image": "https://www.ayakkabicity.com/Uploads/UrunResimleri/buyuk/sanzelize-k-07-kadin-sneaker-ayakkabi-47cd.jpg"
+      "images": ["https://litb-cgis.rightinthebox.com/images/640x640/202103/bps/product/inc/qrevnq1615878565539.jpg?fmt=webp&v=1", "https://litb-cgis.rightinthebox.com/images/640x640/202103/bps/product/inc/crgjlo1616743840054.jpg?fmt=webp&v=1"] 
     },
     {
       "id": 4,
       "title": "Araba",
       "price": 40000,
       "amount": 1,
-      "image": "https://cdn-nq.toyzzshop.com/product/600x600/0f06b_Metal_Cek_Birak_Murat_131_Araba.jpg"
+      "images": ["https://litb-cgis.rightinthebox.com/images/640x640/202003/lhznqp1583229977518.jpg?fmt=webp&v=1", "https://litb-cgis.rightinthebox.com/images/640x640/201908/eahzpn1566805386719.jpg?fmt=webp&v=1"] 
     },
     {
       "id": 5,
       "title": "Gemi",
       "price": 80000000,
       "amount": 1,
-      "image": "https://i.ibb.co/sCbmRKV/Ekran-Resmi-2021-04-16-13-45-31.png"
+      "images": ["https://litb-cgis.rightinthebox.com/images/640x640/201709/iaqluu1505268812996.jpg?fmt=webp&v=1", "https://litb-cgis.rightinthebox.com/images/640x640/202005/ribgff1589881836914.jpg?fmt=webp&v=1"] 
     },
     {
       "id": 6,
       "title": "1 TL",
       "price": 0.12,
       "amount": 1,
-      "image": "https://iasbh.tmgrup.com.tr/802b79/0/0/0/0/0/0?u=http://i.sabah.com.tr/sb/galeri/dunya/1-tlnin-diger-ulke-paralari-karsisindaki-degeri/1.jpg"
+      "images": ["https://litb-cgis.rightinthebox.com/images/640x640/202203/bps/product/inc/heuydb1646807253725.jpg?fmt=webp&v=1", "https://litb-cgis.rightinthebox.com/images/640x640/202203/bps/product/inc/pyormi1646807252489.jpg?fmt=webp&v=1"] 
     },
     {
       "id": 7,
       "title": "100 TL",
       "price": 12.40,
       "amount": 1,
-      "image": "https://i.ibb.co/vPpNrdb/Ekran-Resmi-2021-04-16-13-38-07.png"
+      "images": ["https://litb-cgis.rightinthebox.com/images/640x640/202111/bps/product/inc/gsytwh1636602442493.jpg?fmt=webp&v=1", "https://litb-cgis.rightinthebox.com/images/640x640/202111/bps/product/inc/ottzyy1636602463191.jpg?fmt=webp&v=1"] 
     },
     {
       "id": 8,
       "title": "iPad Pro",
       "price": 1700,
       "amount": 1,
-      "image": "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/apple/thumb/TeoriV2-106818-1_large.jpg"
-    },
-    {
-      "id": 9,
-      "title": "Çanta",
-      "price": 1500000,
-      "amount": 1,
-      "image": "https://www.flowerayakkabi.com/Uploads/UrunResimleri/buyuk/beyaz-deri-sirt-cantasi-2a20.jpg"
-    },
-    {
-      "id": 10,
-      "title": "Elmas",
-      "price": 157878777,
-      "amount": 1,
-      "image": "https://lh3.googleusercontent.com/proxy/kYXnJp3Y4l3F0LzGR-RmZpuB_mDzYE76hH9sHH7Z49yJmE419VLne-7yMX7cDQ4BOcPqGgkqkvuLZiiDy-7HP2R4WNIclWhId9pT"
-    },
-    {
-      "id": 11,
-      "title": "Mona Lisa",
-      "price": 2000000000,
-      "amount": 1,
-      "image": "https://render.fineartamerica.com/images/rendered/square-product/small/images/artworkimages/mediumlarge/1/monalisa-with-white-background-sushil-deokar.jpg"
-    },
-    {
-      "id": 12,
-      "title": "Ekmek",
-      "price": 0.1,
-      "amount": 1,
-      "image": "https://migros-dali-storage-prod.global.ssl.fastly.net/sanalmarket/product/05120000/05120000-a957e2.jpg"
+      "images": ["https://litb-cgis.rightinthebox.com/images/640x640/201803/dnnv1520524248636.jpg?fmt=webp&v=1", "https://litb-cgis.rightinthebox.com/images/640x640/201803/hric1520524262248.jpg"] 
     }
+    
   ]
+  
