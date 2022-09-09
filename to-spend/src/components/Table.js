@@ -30,8 +30,7 @@ export default function StickyHeadTable({ basket }) {
               <TableRow>
                 <TableCell>Product Name</TableCell>
                 <TableCell>Product Image</TableCell>
-                <TableCell>Price</TableCell>
-                <TableCell>Amount </TableCell>
+                <TableCell>Amount x Price </TableCell>
                 <TableCell>Total</TableCell>
               </TableRow>
             </TableHead>
@@ -42,11 +41,12 @@ export default function StickyHeadTable({ basket }) {
                     <TableRow hover role="checkbox" tabIndex={-1} key={pr.id}>
                       <TableCell>{pr.title}</TableCell>
                       <TableCell>
-                        <img src={pr.image} alt="" width={40} />
+                        <img src={pr.images[0]} alt="" width={35} />
                       </TableCell>
-                      <TableCell>{pr.price}</TableCell>
-                      <TableCell>{pr.amount}</TableCell>
-                      <TableCell>{pr.amount * pr.price}</TableCell>
+                      <TableCell>
+                        {pr.amount} x {pr.price}
+                      </TableCell>
+                      <TableCell>${pr.amount * pr.price}</TableCell>
                     </TableRow>
                   );
                 })}
@@ -54,7 +54,7 @@ export default function StickyHeadTable({ basket }) {
           </Table>
         </TableContainer>
         <TablePagination
-          rowsPerPageOptions={[10, 25, 100]}
+          rowsPerPageOptions={[5, 10, 20]}
           component="div"
           count={basket && basket.length}
           rowsPerPage={rowsPerPage}

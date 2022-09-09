@@ -15,7 +15,7 @@ function App() {
   const [allProducts, setAllProducts] = useState(true);
   const [oneProducts, setOneProducts] = useState(false);
   const [imageNumber, setImageNumber] = useState(0);
-  const [oneProductId, setOneProductId] = useState(1);
+  const [oneProductId, setOneProductId] = useState(0);
 
   const resetBasket = () => {
     setBasket([]);
@@ -26,9 +26,7 @@ function App() {
         return acc + item.amount * products.find((product) => product.id === item.id).price;
       }, 0)
     );
-    console.log(total);
-    console.log(basket);
-  }, [basket]);
+  }, [basket, oneProductId]);
 
   return (
     <div className="App">
@@ -51,6 +49,7 @@ function App() {
                       allProducts={allProducts}
                       setAllProducts={setAllProducts}
                       setOneProducts={setOneProducts}
+                      setOneProductId={setOneProductId}
                     />
                   </Grid>
                 ))}
@@ -119,19 +118,26 @@ function App() {
               <div className="modal-footer d-flex justify-content-between">
                 <p className="total-price">
                   <span>Total: </span>
+                  <span>$</span>
                   <span>
                     {basket.reduce((acc, item) => {
                       return acc + item.amount * item.price;
                     }, 0)}
                   </span>
-                  <span> $</span>
+                </p>
+                <p>
+                  {total ? (
+                    <h6>You have ${money - total} left to spend</h6>
+                  ) : (
+                    <h6> You have ${money} to spend</h6>
+                  )}
                 </p>
                 <div className="buttons">
                   <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">
                     Close Basket
                   </button>
-                  <button type="button" className="btn btn-primary ">
-                    Buy Product
+                  <button type="button" className="btn btn-primary ms-3">
+                    Buy Products
                   </button>
                 </div>
               </div>

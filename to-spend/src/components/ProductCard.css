@@ -30,6 +30,7 @@
 }
 .one-sell,
 .one-buy {
+  color: white;
   height: 40px;
   width: 50px;
   font-size: 25px;

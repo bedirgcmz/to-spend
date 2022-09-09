@@ -4,9 +4,9 @@ const Header = ({ total, money }) => {
   return (
     <div className="header">
       {total ? (
-        <h6>Harcayacak {money - total} $ paraniz kaldi</h6>
+        <h6>You have ${money - total} left to spend</h6>
       ) : (
-        <h6>harcamak icin {money} $ paraniz var</h6>
+        <h6> You have ${money} to spend</h6>
       )}
     </div>
   );
